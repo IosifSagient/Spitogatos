@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
 
+    <title>Spitogatos</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navb">
+        <div class="logo">
+          <img
+            src="https://public-v2links.adobecc.com/1b0dc640-6cb6-4b78-4968-d4cedbeac66b/component?params=component_id%3A32a9aae3-6c4e-483f-9545-6382889fd444&params=version%3A0&token=1667545631_da39a3ee_371bc3a85fb1e60490a77b041b98c0c8dc82b6ba&api_key=CometServer1"
+            alt="logo"
+          />
+        </div>
+        <div class="list">
+          <ul>
+            <li><a href="pageone">Main One</a></li>
+            <li><a href="pagetwo">Page Two</a></li>
+            <li><a href="pagethree">Page Three</a></li>
+            <li><a href="about">About Us</a></li>
+            <li><a href="work">Our Work</a></li>
+            <li><a href="contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="language">EN | GR</div>
+      </div>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="sundco">
+            <div class="text">
+              <div class="headline"><span id="h_line">S.</span>und Co</div>
+              <div class="para">
+                To take a trivial example, which of us ever undertakes laborious
+                physical exercise, except to obtain some advantage from it?
+              </div>
+            </div>
+            <div style="text-align: center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+          </div>
+        </div>
+        <div class="mySlides fade">
+          <div class="startTyping">
+            <div class="x_btn">
+              <button onclick="currentSlide(1)" id="x_btn"></button>
+            </div>
+            <div class="srchfield">
+              <div class="vl"></div>
+              <div>
+                <button class="inpt" onkeypress="currentSlide(3)" id="inpt">
+                  Start Typing
+                </button>
+              </div>
+            </div>
+            <div class="hl"></div>
+            <div class="button1">
+              <button onclick="currentSlide(1)" id="but1">Search</button>
+            </div>
+
+            <div style="text-align: center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="geom">
+            <div class="x_btn">
+              <button onclick="currentSlide(1)" id="x_btn"></button>
+            </div>
+            <div class="srchfield">
+              <div>
+                <button class="inpt2" id="inpt2">Geom |</button>
+              </div>
+              <!-- <div class="vl2"></div> -->
+            </div>
+            <div class="hl2"></div>
+            <div class="button1">
+              <button onclick="currentSlide(1)" id="but1">Search</button>
+            </div>
+            <div style="text-align: center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+          </div>
+        </div>
+        <!-- The dots/circles -->
+      </div>
+    </div>
+    <!-- js script -->
+    <script
+      src="./script.js"
+      type="text/javascript"
+      language="Javascript"
+    ></script>
+  </body>
+</html>

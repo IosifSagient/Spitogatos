@@ -1,0 +1,240 @@
+body {
+  margin: 0;
+  font-family: "Montserrat";
+}
+/* html {
+  overflow-y: scroll;
+} */
+.container {
+  max-height: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  font-size: 18px;
+  margin: 10px;
+  font-size: 19px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 800;
+}
+a:hover {
+  color: #b4ff00;
+  text-decoration: underline;
+  text-decoration-thickness: 8px;
+  text-underline-offset: 7px;
+}
+
+.logo {
+  position: relative;
+  left: 72px;
+  top: 26px;
+}
+.navb {
+  display: flex;
+  height: 64px;
+  flex-direction: row;
+  background-color: black;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.navb2 {
+  display: hidden;
+}
+
+.language {
+  font-family: "Montserrat";
+  font-size: 22px;
+  color: #ffffff;
+  text-align: left;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.sundco {
+  height: 1080px;
+  width: auto;
+  background: url("https://public-v2links.adobecc.com/1b0dc640-6cb6-4b78-4968-d4cedbeac66b/component?params=component_id%3Aaf1acdd2-a555-47cb-8645-cc0cb5a6b066&params=version%3A0&token=1667545631_da39a3ee_371bc3a85fb1e60490a77b041b98c0c8dc82b6ba&api_key=CometServer1");
+}
+span,
+#_line {
+  text-decoration: underline;
+  text-decoration-thickness: 8px;
+  text-underline-offset: 7px;
+  text-decoration-color: #b4ff00;
+}
+
+.text {
+  color: white;
+  padding-top: 448px;
+  padding-left: 252px;
+  font-family: "Montserrat";
+  font-weight: 800;
+}
+
+.headline {
+  font-size: 100px;
+}
+.para {
+  font-size: 30px;
+  width: 576px;
+}
+
+/* css for carousel 2 (start typing) */
+
+.startTyping {
+  height: 1080px;
+  width: 1920px;
+}
+.x_btn {
+}
+#x_btn {
+  margin-top: 170px;
+  margin-left: 1680px;
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  width: 28px;
+  height: 28px;
+  background-image: url("https://public-v2links.adobecc.com/1b0dc640-6cb6-4b78-4968-d4cedbeac66b/component?params=component_id%3A87ccf989-f7f7-45f2-8470-53d36716a268&params=version%3A0&token=1667571383_da39a3ee_250e215a7e1cafa0ef926be85eb1249696f325b8&api_key=CometServer1");
+}
+.vl {
+  border-left: 20px solid black;
+  height: 96px;
+  margin-top: 20px;
+}
+.hl {
+  border-bottom: 20px solid #b4ff00;
+  width: 96px;
+  margin-left: 252px;
+}
+.srchfield {
+  display: flex;
+  flex-direction: row;
+  top: 308px;
+  margin-left: 252px;
+}
+.inpt {
+  height: 122px;
+  width: 717px;
+  font-size: 100px;
+  border: none;
+  text-align: left;
+  background-color: white;
+  color: #cfcfcf;
+  cursor: pointer;
+}
+
+.inpt_clicked {
+  height: 122px;
+  width: 717px;
+  font-size: 18px;
+  border: none;
+  text-align: left;
+  background-color: white;
+  color: #cfcfcf;
+  cursor: pointer;
+  font-style: italic;
+}
+
+#but1 {
+  top: 672px;
+  left: 252px;
+  width: 336px;
+  height: 84px;
+  background: #4b00ff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000066;
+  border-radius: 42px;
+  opacity: 1;
+  color: #ffffff;
+  font-size: 32px;
+  border: none;
+  cursor: pointer;
+}
+
+.button1 {
+  margin-top: 265px;
+  margin-left: 252px;
+}
+
+/* css for carousel page 3 (geom) */
+.geom {
+  height: 1080px;
+  width: 1920px;
+}
+.inpt2 {
+  height: 122px;
+  width: 717px;
+  font-size: 100px;
+  font-weight: 800;
+  border: none;
+  text-align: left;
+  background-color: white;
+  color: black;
+}
+/* .vl2 {
+  border-right: 20px solid black;
+  height: 96px;
+  margin-top: 20px;
+} */
+
+.hl2 {
+  border-bottom: 20px solid #b4ff00;
+  width: 308px;
+  margin-left: 252px;
+}
+
+.geomfield {
+  display: flex;
+  flex-direction: row;
+  padding-top: 308px;
+  padding-left: 252px;
+}
+
+/* carousel css */
+
+.mySlides {
+  display: none;
+}
+.dot {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 2px;
+  background-color: #9f9f9f;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  bottom: 63px;
+  left: 920px;
+}
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+Fading animation #fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
