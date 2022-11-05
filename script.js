@@ -60,7 +60,7 @@ function validateEmail() {
 
   var re =
     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  console.log(email);
+
   if (email.match(re)) {
     //Email valid. Procees to test if it's from the right domain (Second argument is to check that the string ENDS with this domain, and that it doesn't just contain it)
     if (
@@ -116,9 +116,28 @@ function phonenumber() {
   }
 }
 
+function checkBoxes() {
+  var option2 = document.getElementById("option2");
+  var option1 = document.getElementById("option1");
+  var invalid = document.getElementById("error_checkbox");
+
+  var valid = false;
+  if (option1.checked) {
+    valid = true;
+  } else if (option2.checked) {
+    valid = true;
+  }
+  if (valid) {
+    return true;
+  } else {
+    invalid.id = "error_checkbox_invalid";
+  }
+}
+
 var submit = document.getElementById("submit_form");
 submit.addEventListener("click", function () {
   validateEmail();
   phonenumber();
   allLetter();
+  checkBoxes();
 });
