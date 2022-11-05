@@ -40,17 +40,85 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
-// function navb() {
-//   while (currentSlide(2) || currentSlide(3)) {
-//     nav.className === "navb2";
-//   }
-// }
-// navb();
+// message Validation
+let textArea = document.getElementById("message");
+let characterCounter = document.getElementById("char_count");
+const maxNumOfChars = 100;
 
-// function pressQ() {
-//   document.addEventListener("keypress", function (event) {
-//     if (event.keyCode === 81) {
-//       return currentSlide(3);
-//     }
-//   });
-// }
+const countCharacters = () => {
+  let numOfEnteredChars = textArea.value.length;
+  let counter = numOfEnteredChars;
+  characterCounter.textContent = counter;
+};
+
+// emailValidation
+function validateEmail() {
+  var email = document.getElementById("email").value;
+  var small = document.getElementById("error_email");
+  var emailClass = document.getElementById("email");
+  var email_label = document.getElementById("email_label");
+
+  var re =
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  console.log(email);
+  if (email.match(re)) {
+    //Email valid. Procees to test if it's from the right domain (Second argument is to check that the string ENDS with this domain, and that it doesn't just contain it)
+    if (
+      email.indexOf(
+        "@spitogatos.gr",
+        email.length - "@spitogatos.gr".length
+      ) !== -1
+    ) {
+      small.innerHTML = "Help Text";
+      emailClass.id = "email_valid";
+    }
+  } else {
+    small.style.color = "red";
+    small.innerHTML = "Error Message";
+    emailClass.id = "email_invalid";
+    email_label.id = "email_label_error";
+  }
+}
+
+function allLetter() {
+  var text = document.getElementById("fname").value;
+  var small = document.getElementById("error_fname");
+  var fnameClass = document.getElementById("fname");
+  var fname_label = document.getElementById("fname_label");
+
+  var letters = /^[A-Za-z]+$/;
+  if (text.match(letters)) {
+    small.innerHTML = "Help Text";
+  } else {
+    small.style.color = "red";
+    small.innerHTML = "Error Message";
+    fnameClass.id = "fname_invalid";
+    fname_label.id = "fname_label_error";
+  }
+}
+// -----------------------------
+
+function phonenumber() {
+  var phone = document.getElementById("phone").value;
+  var small = document.getElementById("error_phone");
+  var phoneClass = document.getElementById("phone");
+  var phone_label = document.getElementById("phone_label");
+  var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+  if (phone.match(phoneno)) {
+    small.innerHTML = "Help Text";
+    // phoneClass.id = "phone_valid";
+  } else {
+    small.style.color = "red";
+    small.innerHTML = "Error Message";
+    phoneClass.id = "phone_invalid";
+    phone_label.id = "phone_label_error";
+    return false;
+  }
+}
+
+var submit = document.getElementById("submit_form");
+submit.addEventListener("click", function () {
+  validateEmail();
+  phonenumber();
+  allLetter();
+});

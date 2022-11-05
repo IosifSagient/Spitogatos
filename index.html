@@ -154,16 +154,15 @@
               alt=""
             />
           </div>
-          <div class="forma">
+          <div class="forma" id="forma">
             <div class="contact_us">Contact Us</div>
             <div class="contact_text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </div>
 
-            <form action="">
+            <form action="" name="form">
               <div class="fname">
-                <label id="fname_label" for="fname">Full Name*</label>
                 <input
                   type="text"
                   name="fname"
@@ -171,56 +170,73 @@
                   required
                   placeholder="Full Name*"
                 />
+                <label id="fname_label" for="fname">Full Name*</label>
                 <div class="small">
-                  <small class="error">This field is required</small>
+                  <small class="error" id="error_fname"
+                    >This field is required</small
+                  >
                 </div>
               </div>
               <div class="email">
-                <label id="email_label" for="email">E-mail*</label>
                 <input
                   type="email"
                   name="email"
                   id="email"
                   placeholder="E-mail*"
+                  required
                 />
+                <label id="email_label" for="email">E-mail*</label>
                 <div class="small">
-                  <small class="error">This field is required</small>
+                  <small class="error" id="error_email"
+                    >This field is required</small
+                  >
                 </div>
               </div>
               <div class="phone">
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="Phone"
+                  required
+                />
                 <label id="phone_label" for="phone">Phone*</label>
-                <input type="tel" name="phone" id="phone" placeholder="Phone" />
                 <div class="small">
-                  <small class="error">This field is required</small>
+                  <small class="error" id="error_phone"
+                    >This field is required</small
+                  >
                 </div>
               </div>
               <div class="categories">
-                <label id="category_label" for="category">Category</label>
                 <select id="category" name="category" size="1" onchange="">
                   <option value="" disabled selected>Category</option>
                   <option>Option</option>
                   <option>Option</option>
                   <option>Option</option>
                 </select>
+                <label id="category_label" for="category">Category</label>
 
-                <label id="categorySelect_label" for="categorySelect"
-                  >Option</label
-                >
                 <select id="categorySelect" name="categorySelect" size="1">
                   <option value="" disabled selected>Option</option>
                   <option>Option</option>
                   <option>Option</option>
                   <option>Option</option>
                 </select>
+                <label id="categorySelect_label" for="categorySelect"
+                  >Option</label
+                >
               </div>
-              <div class="message">
-                <label id="message_label" for="message">Message</label>
+              <div class="message" oninput="countCharacters()">
                 <textarea
                   id="message"
                   name="message"
                   placeholder="Message"
+                  maxlength="100"
                 ></textarea>
-                <div class="small"><small id="word_count">500</small></div>
+                <label id="message_label" for="message">Message</label>
+                <div class="small" id="char_count">
+                  <small id="word_count">100</small>
+                </div>
               </div>
               <div class="options">
                 <p>Please select at least one of the following:</p>
