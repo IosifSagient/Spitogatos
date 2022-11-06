@@ -10,11 +10,6 @@ inpt1.addEventListener("click", function handleClick() {
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// // Next/previous controls
-// function plusSlides(n) {
-//   showSlides((slideIndex += n));
-// }
-
 // Thumbnail image controls
 function currentSlide(n) {
   showSlides((slideIndex = n));
@@ -70,7 +65,7 @@ function validateEmail() {
       ) !== -1
     ) {
       small.innerHTML = "Help Text";
-      emailClass.id = "email_valid";
+      // emailClass.id = "email_valid";
     }
   } else {
     small.style.color = "red";
@@ -80,13 +75,15 @@ function validateEmail() {
   }
 }
 
+// name validation
+
 function allLetter() {
   var text = document.getElementById("fname").value;
   var small = document.getElementById("error_fname");
   var fnameClass = document.getElementById("fname");
   var fname_label = document.getElementById("fname_label");
 
-  var letters = /^[A-Za-z]+$/;
+  var letters = /^[A-Za-z][A-Za-z\s]*$/;
   if (text.match(letters)) {
     small.innerHTML = "Help Text";
   } else {
@@ -96,7 +93,7 @@ function allLetter() {
     fname_label.id = "fname_label_error";
   }
 }
-// -----------------------------
+// phone validation
 
 function phonenumber() {
   var phone = document.getElementById("phone").value;
@@ -115,6 +112,8 @@ function phonenumber() {
     return false;
   }
 }
+
+// checkBoxes
 
 function checkBoxes() {
   var option2 = document.getElementById("option2");
@@ -140,4 +139,39 @@ submit.addEventListener("click", function () {
   phonenumber();
   allLetter();
   checkBoxes();
+  console.log(data);
+});
+var select = document.getElementById("category");
+let data = [];
+(function () {
+  fetch("https://run.mocky.io/v3/0b8fbded-6ce4-4cb2-bf2f-d2c39207506b")
+    .then((response) => response.json())
+    .then((json) => {
+      data = [...json];
+      if (data.length != 0) {
+        data.forEach(function (item) {
+          var opt = document.createElement("option");
+          opt.value = item.categoryId;
+          opt.innerHTML = item.name;
+
+          select.appendChild(opt);
+        });
+      }
+    });
+})();
+
+select.addEventListener("change", function () {
+  var subcategories = data[this.value]["subCategories"];
+  console.log(subcategories);
+  var sub = document.getElementById("categorySelect");
+  sub.innerHTML = "";
+  if (subcategories.length != 0) {
+    subcategories.forEach(function (item) {
+      var opt = document.createElement("option");
+      opt.value = item.subCategoryId;
+      opt.innerHTML = item.name;
+
+      sub.appendChild(opt);
+    });
+  }
 });
