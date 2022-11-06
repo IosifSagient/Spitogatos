@@ -112,7 +112,7 @@ span,
   background-repeat: no-repeat;
   width: 28px;
   height: 28px;
-  background-image: url("https://public-v2links.adobecc.com/1b0dc640-6cb6-4b78-4968-d4cedbeac66b/component?params=component_id%3A87ccf989-f7f7-45f2-8470-53d36716a268&params=version%3A0&token=1667571383_da39a3ee_250e215a7e1cafa0ef926be85eb1249696f325b8&api_key=CometServer1");
+  background-image: url("https://public-v2links.adobecc.com/1b0dc640-6cb6-4b78-4968-d4cedbeac66b/component?params=component_id%3A87ccf989-f7f7-45f2-8470-53d36716a268&params=version%3A0&token=1667832212_da39a3ee_b9b125571bbe40c4d1627e7770933db242529313&api_key=CometServer1");
 }
 .vl {
   border-left: 20px solid black;
@@ -259,8 +259,7 @@ Fading animation #fade {
   width: 696px;
   height: 368px;
 }
-#girl_photo {
-}
+
 .girl_photo:hover {
   background-position: 50% 20px, top;
 }
