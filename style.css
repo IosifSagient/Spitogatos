@@ -258,10 +258,17 @@ Fading animation #fade {
   margin-left: 252px;
   width: 696px;
   height: 368px;
+  position: relative;
+  overflow: hidden;
 }
-
-.girl_photo:hover {
-  background-position: 50% 20px, top;
+#girl_photo {
+  position: relative;
+  top: 0;
+  width: 696px;
+  transition: top ease 0.5s;
+}
+#girl_photo:hover {
+  top: -200px;
 }
 .girl_desc {
   width: 456px;
@@ -568,6 +575,7 @@ Fading animation #fade {
   text-indent: 40px;
   font-weight: 500;
 }
+
 #phone:focus {
   outline: none !important;
   border-color: #4b00ff;

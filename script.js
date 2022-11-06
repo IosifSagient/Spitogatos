@@ -65,7 +65,9 @@ function validateEmail() {
       ) !== -1
     ) {
       small.innerHTML = "Help Text";
-      // emailClass.id = "email_valid";
+      email_label.style.opacity = "1";
+      email_label.style.top = "2555px";
+      email_label.style.color = "#000000";
     }
   } else {
     small.style.color = "red";
@@ -86,6 +88,9 @@ function allLetter() {
   var letters = /^[A-Za-z][A-Za-z\s]*$/;
   if (text.match(letters)) {
     small.innerHTML = "Help Text";
+    fname_label.style.opacity = "1";
+    fname_label.style.top = "2440px";
+    fname_label.style.color = "#000000";
   } else {
     small.style.color = "red";
     small.innerHTML = "Error Message";
@@ -97,13 +102,16 @@ function allLetter() {
 
 function phonenumber() {
   var phone = document.getElementById("phone").value;
+
   var small = document.getElementById("error_phone");
   var phoneClass = document.getElementById("phone");
   var phone_label = document.getElementById("phone_label");
   var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
   if (phone.match(phoneno)) {
     small.innerHTML = "Help Text";
-    // phoneClass.id = "phone_valid";
+    phone_label.style.opacity = "1";
+    phone_label.style.bottom = "70px";
+    phone_label.style.color = "#000000";
   } else {
     small.style.color = "red";
     small.innerHTML = "Error Message";
