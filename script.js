@@ -52,6 +52,7 @@ function validateEmail() {
   var small = document.getElementById("error_email");
   var emailClass = document.getElementById("email");
   var email_label = document.getElementById("email_label");
+  var check_email = document.getElementById("checkmark_email");
 
   var re =
     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -68,6 +69,7 @@ function validateEmail() {
       email_label.style.opacity = "1";
       email_label.style.top = "2555px";
       email_label.style.color = "#000000";
+      check_email.style.opacity = "1";
     }
   } else {
     small.style.color = "red";
@@ -84,6 +86,7 @@ function allLetter() {
   var small = document.getElementById("error_fname");
   var fnameClass = document.getElementById("fname");
   var fname_label = document.getElementById("fname_label");
+  var check_fname = document.getElementById("checkmark_fname");
 
   var letters = /^[A-Za-z][A-Za-z\s]*$/;
   if (text.match(letters)) {
@@ -91,6 +94,7 @@ function allLetter() {
     fname_label.style.opacity = "1";
     fname_label.style.top = "2440px";
     fname_label.style.color = "#000000";
+    check_fname.style.opacity = "1";
   } else {
     small.style.color = "red";
     small.innerHTML = "Error Message";
@@ -106,12 +110,14 @@ function phonenumber() {
   var small = document.getElementById("error_phone");
   var phoneClass = document.getElementById("phone");
   var phone_label = document.getElementById("phone_label");
+  var check_phone = document.getElementById("checkmark_phone");
   var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
   if (phone.match(phoneno)) {
     small.innerHTML = "Help Text";
     phone_label.style.opacity = "1";
     phone_label.style.bottom = "70px";
     phone_label.style.color = "#000000";
+    check_phone.style.opacity = "1";
   } else {
     small.style.color = "red";
     small.innerHTML = "Error Message";

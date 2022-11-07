@@ -70,7 +70,7 @@ a:hover {
 .sundco {
   height: 1080px;
   width: auto;
-  background: url("https://public-v2links.adobecc.com/1b0dc640-6cb6-4b78-4968-d4cedbeac66b/component?params=component_id%3Aaf1acdd2-a555-47cb-8645-cc0cb5a6b066&params=version%3A0&token=1667545631_da39a3ee_371bc3a85fb1e60490a77b041b98c0c8dc82b6ba&api_key=CometServer1");
+  background: url("https://public-v2links.adobecc.com/1b0dc640-6cb6-4b78-4968-d4cedbeac66b/component?params=component_id%3Aaf1acdd2-a555-47cb-8645-cc0cb5a6b066&params=version%3A0&token=1667925562_da39a3ee_5e6e1cc3cc2b774fc36b31460ce72c583ce47d30&api_key=CometServer1");
 }
 span,
 #_line {
@@ -454,6 +454,14 @@ Fading animation #fade {
   background-color: #ffffff;
   opacity: 1;
 }
+#checkmark_fname {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 2510px;
+  left: 1702px;
+  opacity: 0;
+}
 #email {
   margin-top: 40px;
   width: 696px;
@@ -463,6 +471,14 @@ Fading animation #fade {
   opacity: 1;
   text-indent: 40px;
   font-weight: 500;
+}
+#checkmark_email {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 2625px;
+  left: 1702px;
+  opacity: 0;
 }
 #email::placeholder {
   color: black;
@@ -563,6 +579,15 @@ Fading animation #fade {
   z-index: 2;
   background-color: #ffffff;
   opacity: 1;
+}
+
+#checkmark_phone {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 2740px;
+  left: 1702px;
+  opacity: 0;
 }
 #phone_invalid {
   outline: none !important;
